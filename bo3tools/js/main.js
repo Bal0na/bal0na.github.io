@@ -11,7 +11,6 @@ const gb4 = document.getElementById("gb4");
 const gb5 = document.getElementById("gb5");
 
 if (localStorage.getItem("pack") !== null) {
-    console.log("Pack de gobbles détecter")
     let gbStore1 = localStorage.getItem("g1");
     let gbStore2 = localStorage.getItem("g2");
     let gbStore3 = localStorage.getItem("g3");
@@ -65,7 +64,6 @@ setPackBtn.addEventListener("click", () => {
                 let gb5Store = localStorage.getItem("g5");
 
                 location.reload();
-                console.log("localstorage crée")
             } else {
                 bootbox.alert({
                     title: "BO3 Tools",
@@ -97,6 +95,3 @@ resetPackBtn.addEventListener("click", () => {
 resetCycleBtn.addEventListener("click", () => {
         $('.selectpicker').selectpicker('val', 'Choose gobblegum');
 });
-
-//    localStorage.setItem("pack1",)
-// console.log(gb1.options[gb1.selectedIndex].text); // Return la bonne valeur
