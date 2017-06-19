@@ -10,6 +10,10 @@ const gb3 = document.getElementById("gb3");
 const gb4 = document.getElementById("gb4");
 const gb5 = document.getElementById("gb5");
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+    $('.selectpicker').selectpicker('mobile');
+}
+
 if (localStorage.getItem("pack") !== null) {
     let gbStore1 = localStorage.getItem("g1");
     let gbStore2 = localStorage.getItem("g2");
@@ -93,5 +97,5 @@ resetPackBtn.addEventListener("click", () => {
 });
 
 resetCycleBtn.addEventListener("click", () => {
-        $('.selectpicker').selectpicker('val', 'Choose gobblegum');
+    $('.selectpicker').selectpicker('val', 'Choose gobblegum');
 });
